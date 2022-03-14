@@ -19,7 +19,7 @@ playGame = putStrLn "Type 0 for Rock, 1 for Paper, 2 for Scissors or 3 to quit."
               case readMaybe lineIn of
                 Just 3 -> putStrLn "Thanks for playing." >> return ()
                 Just n
-                  | n >= 0 && n <= 3 -> playAI (toEnum n) >> playGame
+                  | n >= 0 && n <= 2 -> playAI (toEnum n) >> playGame
                 _ -> putStrLn "Invalid input." >> playGame
 
 play :: Move -> Move -> Result
